@@ -46,10 +46,3 @@ def position(vi, angle, hi):
         t = t + 0.01
     
     return points_x, points_y
-        
-        
-    
-        
-    
-    
-
