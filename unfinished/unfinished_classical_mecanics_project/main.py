@@ -47,14 +47,3 @@ while(True):
     if( reponse == 'o' or reponse == 'O' ):
         exit()
     
-    
-    
-    
-
-    
-    
-
-        
-
-
-
