@@ -39,6 +39,6 @@ for i, url in enumerate(attachments):
     name = url.split('/')[-1]
     
     if response.status_code == 200:
-        with open(f'{name}.{i}', 'wb') as file:
+        with open(f'{i}.{name}', 'wb') as file:
              file.write(response.content)
              print('Downloading', name, '---' ,nb_attachements - (i + 1), 'more to go!')
