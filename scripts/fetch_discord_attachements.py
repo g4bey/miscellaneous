@@ -23,7 +23,6 @@ for item in items:
                     [attachments.append(url) for url in attachment.split(' ')]
 
 
-
 if not os.path.exists(result_directory):
     os.makedirs(result_directory) 
     
@@ -34,14 +33,15 @@ with open('links.txt', 'w') as result:
 
 nb_attachements = len(attachments)
 
+print(nb_attachements)
 for i, url in enumerate(attachments):
     response = requests.get(url)
     name = url.split('/')[-1]
-
+    
     if response.status_code == 200:
-        with open(f'{name}', 'wb') as file:
+        with open(f'{name}.{i}', 'wb') as file:
              file.write(response.content)
-             print('Downloading:', name, nb_attachements - (i + 1), 'more to go!')
+             print('Downloading', name, '---' ,nb_attachements - (i + 1), 'more to go!')
     
     
 
