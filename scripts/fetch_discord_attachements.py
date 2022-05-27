@@ -42,8 +42,3 @@ for i, url in enumerate(attachments):
         with open(f'{name}.{i}', 'wb') as file:
              file.write(response.content)
              print('Downloading', name, '---' ,nb_attachements - (i + 1), 'more to go!')
-    
-    
-
-    
-    
